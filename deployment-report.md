@@ -56,8 +56,8 @@ Live URL: https://armor-knowledge.pages.dev/
 - **Node.js:** 22 (`NODE_VERSION=22` and `.node-version`)
 - **Framework preset:** None
 - **Deployment mode:** Direct Upload via Wrangler
-- **Latest deployment:** `https://20677c5f.armor-knowledge.pages.dev`
-- **Latest commit:** `cfafe4c4f5e75431907349c31879bb67fd5bd685`
+- **Latest deployment:** `https://6947a5b5.armor-knowledge.pages.dev`
+- **Latest commit:** `30a59ad7684cf74ec9565f182790685aa7343b1a`
 - **Git Provider:** Not connected. This Direct Upload project cannot be
   switched to Git Integration later; see `CLOUDFLARE_DEPLOY.md` for options.
 

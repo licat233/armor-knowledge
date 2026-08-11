@@ -21,8 +21,9 @@
 The Pages API stores the build command, output directory, root directory, and
 `NODE_VERSION=22`. The repository also pins Node with `.node-version`.
 
-The first production deployment was uploaded from commit
-`cfafe4c4f5e75431907349c31879bb67fd5bd685`.
+The latest production deployment is
+`https://6947a5b5.armor-knowledge.pages.dev`, uploaded from commit
+`30a59ad7684cf74ec9565f182790685aa7343b1a`.
 
 ## Deployment mode
 
