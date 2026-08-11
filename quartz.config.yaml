@@ -9,8 +9,7 @@ configuration:
   enablePopovers: true
   analytics: null
   locale: en-US
-  # baseUrl is intentionally left unset until the site is deployed (Cloudflare
-  # Pages). The CNAME emitter warns and skips writing public/CNAME until then.
+  baseUrl: armor-knowledge.pages.dev
   ignorePatterns:
     - private
     - templates

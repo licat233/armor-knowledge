@@ -1,6 +1,8 @@
 # ARMOR Knowledge — Deployment Report
 
-Status: **initialized locally; not yet deployed.**
+Status: **live on Cloudflare Pages.**
+
+Live URL: https://armor-knowledge.pages.dev/
 
 ## Completed (local)
 
@@ -25,6 +27,9 @@ Status: **initialized locally; not yet deployed.**
 - [x] Documentation added: `CLOUDFLARE_DEPLOY.md`, `deployment-report.md`
 - [x] `.gitignore` already excludes `public/`, `.obsidian`, `private/`,
       `node_modules`, and build caches
+- [x] Cloudflare Pages project `armor-knowledge` created
+- [x] Production deployment uploaded from branch `v5`
+- [x] Live URL verified with HTTP 200 and page title `ARMOR Knowledge`
 
 ## Notes / deviations from the original task plan
 
@@ -43,16 +48,23 @@ Status: **initialized locally; not yet deployed.**
 
 ## Deployment
 
-- **Cloudflare Pages project: NOT created** (intentionally deferred until the
-  owner approves).
-- No Pages URL yet.
-- Build command for Pages: `npx quartz build` (output dir `public`, Node 22,
-  framework preset **None**) — see `CLOUDFLARE_DEPLOY.md`.
+- **Cloudflare Pages project:** `armor-knowledge`
+- **Live URL:** https://armor-knowledge.pages.dev/
+- **Production branch:** `v5`
+- **Build command:** `npx quartz build`
+- **Output directory:** `public`
+- **Node.js:** 22 (`NODE_VERSION=22` and `.node-version`)
+- **Framework preset:** None
+- **Deployment mode:** Direct Upload via Wrangler
+- **Latest deployment:** `https://20677c5f.armor-knowledge.pages.dev`
+- **Latest commit:** `cfafe4c4f5e75431907349c31879bb67fd5bd685`
+- **Git Provider:** Not connected. This Direct Upload project cannot be
+  switched to Git Integration later; see `CLOUDFLARE_DEPLOY.md` for options.
 
 ## Next steps
 
-1. Owner approves creation of the Cloudflare Pages project connected to
-   `licat233/armor-knowledge` (branch `v5`).
-2. Set `baseUrl` in `quartz.config.yaml` to the deployed domain.
-3. Export real content via the public export workflow.
+1. Export real content via the public export workflow.
+2. Build and publish updated `public/` output with Wrangler.
+3. If automatic GitHub deployments are required, create a separate
+   Git-integrated Pages project and select `licat233/armor-knowledge` / `v5`.
 4. Optionally configure a custom domain and analytics.
