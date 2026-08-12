@@ -68,5 +68,20 @@ Once a Pages project has the custom domain configured:
 
 The source of truth remains the `v5` branch of
 `licat233/armor-knowledge`; the current Direct Upload project is updated by
-the Wrangler command above. See `scripts/README.md` for how content gets into
+the root-level `update-site.sh` script:
+
+```bash
+cd /Volumes/MacData/projects/armor-knowledge/quartz
+
+# Build and preview the deployment without uploading
+./update-site.sh --dry-run
+
+# Build and upload public/ to the live Pages project
+./update-site.sh
+```
+
+The script does not run `git add`, `git commit`, or `git push`. Commit the
+source changes separately so Git remains the record of what was published.
+The project and branch can be overridden with `CLOUDFLARE_PAGES_PROJECT` and
+`CLOUDFLARE_PAGES_BRANCH`. See `scripts/README.md` for how content gets into
 `content/` in the first place.
