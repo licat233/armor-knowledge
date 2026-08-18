@@ -98,7 +98,14 @@ if [ "$FILE_COUNT" -eq 0 ]; then
   exit 1
 fi
 
-DEPLOY_CMD=(npx --yes wrangler@latest pages deploy "$PUBLIC_DIR" --project-name "$PROJECT" --branch "$BRANCH")
+DEPLOY_CMD=(
+  npx --yes wrangler@latest pages deploy "$PUBLIC_DIR"
+  --project-name "$PROJECT"
+  --branch "$BRANCH"
+  # This records the dirty-worktree state in deployment metadata; it does not
+  # create a Git commit.
+  --commit-dirty=true
+)
 
 echo ">> Built ${FILE_COUNT} file(s) into $PUBLIC_DIR"
 echo ">> Project: $PROJECT   Branch: $BRANCH"
